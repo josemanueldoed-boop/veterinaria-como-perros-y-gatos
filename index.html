@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Como Perros y Gatos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR NAV ===================== -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+  <nav class="sidebar" id="sidebar">
+    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+    <div class="sidebar-logo">🐾 Como Perros y Gatos</div>
+    <ul>
+      <li><a href="#productos" onclick="closeSidebar()">🛍️ Productos</a></li>
+      <li><a href="#nosotros" onclick="closeSidebar()">🌿 Nosotros</a></li>
+      <li><a href="#contacto" onclick="closeSidebar()">📍 Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== BOTÓN FLOTANTE MENÚ ===================== -->
+  <button class="menu-btn" id="menuBtn" onclick="openSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- ===================== HEADER ===================== -->
+  <header>
+    <!-- Franja superior de presentación -->
+    <div class="top-bar">
+      <p>🐶 Bienvenido a <strong>Como Perros y Gatos</strong> – Jesus</p>
+    </div>
+
+    <!-- Slider -->
+    <div class="slider" id="slider">
+      <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/josemanueldoed-boop/img/refs/heads/main/cartel.png');">
+        <div class="slide-caption">
+          <h2>Todo para el bienestar de tu mascota</h2>
+          <p>en un solo lugar</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://raw.githubusercontent.com/josemanueldoed-boop/img/refs/heads/main/local.jpeg');">
+        <div class="slide-caption">
+          <h2>Nuestro local</h2>
+          <p>siempre disponibles para tus mascotas</p>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://raw.githubusercontent.com/josemanueldoed-boop/img/refs/heads/main/pets.jpg');">
+        <div class="slide-caption">
+          <h2>Lo mejor para ellos</h2>
+          <p>En nuestro local</p>
+        </div>
+      </div>
+
+      <!-- Indicadores -->
+      <div class="slider-dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </div>
+
+    <!-- Logo flotante superpuesto -->
+    <div class="logo-float">
+      <div class="logo-inner">
+        <img
+          src="https://raw.githubusercontent.com/josemanueldoed-boop/img/refs/heads/main/Gemini_Generated_Image_3k5i8e3k5i8e3k5i.png"
+          alt="Como Perros y Gatos Logo"
+          class="logo-img"
+        />
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== BODY ===================== -->
+  <main>
+
+    <!-- SECCIÓN 1: CATEGORÍAS DE PRODUCTOS -->
+    <section class="categorias" id="productos">
+      <div class="section-title">
+        <span class="tag">Nuestros Productos</span>
+        <h2>Lo mejor para tu mascota</h2>
+        <p>Seleccionamos cada producto con amor y responsabilidad</p>
+      </div>
+
+      <!-- ── GATOS ── -->
+      <div class="categoria-block">
+        <div class="categoria-hero" style="background-image: url('https://raw.githubusercontent.com/josemanueldoed-boop/img/refs/heads/main/gatos%20est.jpeg');">
+          <div class="categoria-hero-overlay"></div>
+          <span class="categoria-nombre">🐱 Gatos</span>
+        </div>
+        <div class="categoria-body">
+          <div class="categoria-desc">
+            <h3>Todo para tu felino</h3>
+            <p>Desde alimento premium hasta complemetos para su dieta. Tenemos todo lo que tu gato necesita para vivir feliz, saludable y mimado cada día.</p>
+            <a href="https://wa.me/573102743010" class="btn-categoria">📱 comunicate para ver nuestro catálogo completo →</a>
+          </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PERROS ── -->
+      <div class="categoria-block reverse">
+        <div class="categoria-hero" style="background-image: url('https://raw.githubusercontent.com/josemanueldoed-boop/img/refs/heads/main/perros%20est.jpeg');">
+          <div class="categoria-hero-overlay"></div>
+          <span class="categoria-nombre">🐶 Perros</span>
+        </div>
+        <div class="categoria-body">
+          <div class="categoria-desc">
+            <h3>El mejor compañero merece lo mejor</h3>
+            <p>Lo mejor en sabor y nuticion para tu perro. Encontrarás todo lo necesario para mantener a tu perro activo, sano y lleno de energía.</p>
+            <a href="https://wa.me/573102743010" class="btn-categoria">📱 comunicate para ver nuestro catálogo completo →</a>
+          </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ACCESORIOS ── -->
+      <div class="categoria-block">
+        <div class="categoria-hero" style="background-image: url('https://raw.githubusercontent.com/josemanueldoed-boop/img/refs/heads/main/acc%20est.jpeg');">
+          <div class="categoria-hero-overlay"></div>
+          <span class="categoria-nombre">🦮 Accesorios</span>
+        </div>
+        <div class="categoria-body">
+          <div class="categoria-desc">
+            <h3>Diversión y confort garantizados</h3>
+            <p>Correas, camas, transportadoras, juguetes y mucho más. Todo lo que necesitas para hacer la vida de tu mascota más cómoda y divertida.</p>
+            <a href="https://wa.me/573102743010" class="btn-categoria">📱 comunicate para ver nuestro catálogo completo →</a>
+          </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ASEO ── -->
+      <div class="categoria-block reverse">
+        <div class="categoria-hero" style="background-image: url('https://raw.githubusercontent.com/josemanueldoed-boop/img/refs/heads/main/aseo%20est.jpeg');">
+          <div class="categoria-hero-overlay"></div>
+          <span class="categoria-nombre">🛁 Aseo</span>
+        </div>
+        <div class="categoria-body">
+          <div class="categoria-desc">
+            <h3>Limpieza y cuidado con amor</h3>
+            <p>Shampoos, cepillos, toallas y productos especializados para mantener a tu mascota siempre limpia y saludable de la cabeza a las patas.</p>
+            <a href="https://wa.me/573102743010" class="btn-categoria">📱 comunicate para ver nuestro catálogo completo →</a>
+          </div></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN 2: MISIÓN Y VISIÓN -->
+    <section class="nosotros" id="nosotros">
+      <div class="nosotros-bg-decor"></div>
+
+      <div class="section-title light">
+        <span class="tag alt">Quiénes Somos</span>
+        <h2>Más que una tienda, una familia</h2>
+      </div>
+
+      <div class="mv-grid">
+        <div class="mv-card">
+          <div class="mv-icon">🎯</div>
+          <h3>Nuestra Misión</h3>
+          <p>Karol.</p>
+        </div>
+        <div class="mv-divider">🐾</div>
+        <div class="mv-card">
+          <div class="mv-icon">🌟</div>
+          <h3>Nuestra Visión</h3>
+          <p>Joselin.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <!-- Parte 1: Información de contacto -->
+    <div class="footer-info" id="contacto">
+      <div class="footer-col">
+        <div class="footer-logo">🐾 Como Perros y Gatos</div>
+        <p class="footer-desc">Tu destino favorito para el cuidado y bienestar de tu mascota.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/comoperrosygatospetshop01?igsh=d3EwdTZ4NGV1ZjIy">📸</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-list">
+          <li>📍 Carrera 9 # 13-73, barrio bolivar, zarzal, antioquia, colombia</li>
+          <li><a href="https://wa.me/573102743010">📱 hablanos por whatsapp</a></li>
+          <li><a href="tel:+573102743010">📞 contactanos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horario</h4>
+        <ul class="footer-list">
+          <li>Lunes – Sabados: 8:30am – 8:00pm</li>
+          <li>Domingos: 8:30am – 1:00pm</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-list links">
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Parte 2: Copyright -->
+    <div class="footer-copy">
+      <p>© 2026 <strong>Como Perros y Gatos</strong>. Todos los derechos reservados. Hecho con 🐾 y mucho amor.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
